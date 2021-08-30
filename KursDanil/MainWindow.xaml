@@ -1,0 +1,27 @@
+﻿<Window x:Class="KursDanil.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursDanil" d:DataContext="{d:DesignInstance Type=local:Bank}"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="ClientsData" Grid.Column="1" SelectionChanged="ClientsData_SelectionChanged"/>
+        <DataGrid x:Name="TransactionsData" Grid.Column="2"/>
+        <DatePicker x:Name="Date" HorizontalAlignment="Left" Margin="10,0,0,10" Height="24" VerticalAlignment="Bottom"/>
+        <Button x:Name="AddClient" Content="AddClient" Margin="10,10,0,0" VerticalAlignment="Top" Height="40" BorderThickness="0,0,0,0" HorizontalAlignment="Left" Width="123" Click="AddClient_Click"/>
+        <Button x:Name="DeleteClient" Content="DeleteClient" HorizontalAlignment="Left" Margin="133,10,0,0" VerticalAlignment="Top" Height="40" Width="123" BorderThickness="0,0,0,0" Click="DeleteClient_Click"/>
+        <Button x:Name="AddOperations" Content="AddOperations" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Height="40" Width="123" BorderThickness="0,0,0,0" Click="AddOperations_Click"/>
+        <TextBox x:Name="NameClient" Text="Sergo" TextWrapping="Wrap" Width="120" Margin="10,0,0,67" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Left" PreviewTextInput="NameClient_PreviewTextInput" PreviewKeyDown="NameClient_PreviewKeyDown"/>
+        <TextBox x:Name="SumOper" Text="100" TextWrapping="Wrap" Width="120" Margin="10,0,0,39" HorizontalAlignment="Left" Height="23" VerticalAlignment="Bottom" PreviewTextInput="SumOper_PreviewTextInput" PreviewKeyDown="SumOper_PreviewKeyDown"/>
+        <Button x:Name="Save_Button" Content="Save" HorizontalAlignment="Left" Margin="133,50,0,0" VerticalAlignment="Top" Height="40" Width="123" BorderThickness="0,0,0,0" Click="Save_Button_Click"/>
+        <Button x:Name="Open_Button" Content="Open" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Height="40" Width="123" BorderThickness="0,0,0,0" Click="Open_Button_Click"/>
+
+    </Grid>
+</Window>
