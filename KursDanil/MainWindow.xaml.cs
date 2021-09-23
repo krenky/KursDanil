@@ -151,12 +151,19 @@ namespace KursDanil
 
         private async void Open_Button_Click(object sender, RoutedEventArgs e)
         {
+            Bank bank = new Bank();
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            if((bool)openFileDialog.ShowDialog())
+            if ((bool)openFileDialog.ShowDialog())
                 using (FileStream fs = (FileStream)openFileDialog.OpenFile())
                 {
                     NewBank = await JsonSerializer.DeserializeAsync<Bank>(fs);
                 }
+            ClientsData.ItemsSource = ConvertMassToList();
+            //foreach (Clients i in bank.Clients)
+            //{
+            //    NewBank.Add(i);
+            //    NewBank.
+            //}
         }
     }
 }
