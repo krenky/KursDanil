@@ -213,9 +213,9 @@ namespace KursDanil
         public List<Operations> GetOperations { get => ToList();
             set
             {
-                foreach(Operations i in value)
+                for(int i = 1; i<value.Count; i++)
                 {
-                    AddOperation(i);
+                    AddOperation(value[i]);
                 }
             }
         }
