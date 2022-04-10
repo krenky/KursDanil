@@ -11,6 +11,7 @@ namespace KursDanil
     [Serializable]
     class Bank
     {
+        //Серега ёмаё
         Clients[] _clients;
         int _count;
         int _Head, _Tail;
